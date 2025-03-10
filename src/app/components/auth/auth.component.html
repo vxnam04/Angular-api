@@ -1,0 +1,18 @@
+<h2>Đăng ký</h2>
+<input type="text" placeholder="Tên" [(ngModel)]="name" />
+<input type="email" placeholder="Email" [(ngModel)]="email" />
+<input type="password" placeholder="Mật khẩu" [(ngModel)]="password" />
+<button (click)="register()">Đăng ký</button>
+
+<h2>Đăng nhập</h2>
+<input type="email" placeholder="Email" [(ngModel)]="email" />
+<input type="password" placeholder="Mật khẩu" [(ngModel)]="password" />
+
+<h2>Danh sách Users</h2>
+<button (click)="getUsers()">Lấy danh sách</button>
+<ul>
+  <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+</ul>
+
+<h2>Đăng xuất</h2>
+<button (click)="logout()">Đăng xuất</button>
